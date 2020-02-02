@@ -1,0 +1,50 @@
+*, *::after, *::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 16px;//1rem = 10px, 10/16 = 62.5%
+}
+li{
+    list-style: none;
+}
+body{
+    font-family: Helvetica, sans-serif;
+    overflow-x: hidden;
+}
+
+.wrapper{
+    max-width: 1680px;
+    margin: 0 auto;
+    background-color: #897e93;
+    @include resp (480){
+        // overflow-x: hidden;
+    }
+}
+.wrapper__inner-top{
+    height: 110px;
+    @include resp(960){
+        height: 0;
+    }
+}
+.container{
+    max-width: 1360px;
+    background-color: #ffffff;
+    height: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    @include resp(1360){
+        margin: 0 80px;
+    }
+    @include resp(960){
+        margin: 0;
+    }
+}
+
+.wrapper__inner-bottom{
+    height: 145px;
+    @include resp(960){
+        height: 0;
+    }
+}

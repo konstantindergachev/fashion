@@ -1,0 +1,94 @@
+.brands {
+    &__list {
+        max-width: 1200px;
+        height: 250px;
+        background: #fff;
+        position: relative;
+        margin: 0 80px;
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-end;
+        @include resp(1360) {
+            flex-wrap: wrap;
+            height: 100%;
+            margin-top: 40px;
+        }
+    }
+    &__item {
+        margin-bottom: 35px;
+        width: 100%;
+        &:hover{
+            animation: taDa .5s ease-in-out infinite;
+        }
+        @include resp(1360) {
+            width: 30%;
+        }
+        @include resp(720) {
+            width: 50%;
+        }
+        @include resp(480) {
+            width: 100%;
+            align-self: center;
+        }
+        @include resp(480) {
+            margin-left: 25%;
+        }
+        &:nth-child(2) {
+            .brands__img {
+                @include resp(1360) {
+                    margin-left: 25%;
+                }
+                @include resp(720) {
+                    margin-left: 50%;
+                }
+                @include resp(480) {
+                    margin-left: 0%;
+                }
+            }
+        }
+        &:nth-child(5) {
+            .brands__img {
+                @include resp(1360) {
+                    margin-left: 25%;
+                }
+                @include resp(720) {
+                    margin-left: 0;
+                }
+            }
+        }
+        &:nth-child(3) {
+            .brands__img {
+                @include resp(1360) {
+                    margin-left: 50%;
+                }
+                @include resp(720) {
+                    margin-left: 0;
+                }
+            }
+        }
+        &:nth-child(4) {
+            .brands__img {
+                @include resp(720) {
+                    margin-left: 50%;
+                }
+                @include resp(480) {
+                    margin-left: 0%;
+                }
+            }
+        }
+        &:last-child {
+            .brands__img {
+                margin-left: 28%;
+                @include resp(1360) {
+                    margin-left: 50%;
+                }
+                @include resp(480) {
+                    margin-left: 0%;
+                }
+            }
+        }
+    }
+    &__img {
+        max-width: 143px;
+    }
+}

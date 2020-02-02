@@ -1,0 +1,36 @@
+/*---------- 'FONT' ----------*/
+$fa-font-path: "fonts";
+$default-font-size: 1.6rem;
+
+/*---------- 'COLORS' ----------*/
+$color-primary:#55c57a;
+$color-primary-light:#7ed56f;
+$color-primary-dark:#28b485;
+
+$color-secondary-light:#ffb900;
+$color-secondary-dark:#ff7730;
+
+$color-tertiary-light:#797da0;
+$color-tertiary-dark:#575b78;
+
+$color-gray-light-1:#f7f7f7;
+$color-gray-light-2:#eeeeee;
+
+$color-white: #ffffff;
+$color-black: #000000;
+
+$color-gray-dark-1: #777777;
+$color-gray-dark-2: #999999;
+$color-gray-dark-3: #333333;
+
+$color-red: #ff0000;
+
+$shadow: rgba($color-black, .15);
+
+/*---------- 'GRID' ----------*/
+$grid-width: 114rem;
+$gap-vertical: 8rem;
+$gap-vertical-small: 6rem;
+$gap-horizontal: 6rem;
+
+$easing: cubic-bezier(.6, .05, .28, .91);

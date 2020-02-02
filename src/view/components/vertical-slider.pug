@@ -1,0 +1,22 @@
+- const slider = [{img:'/img/model-11.png', alt:'model eleven', title: 'top 20 trends for', abs:'spring/summer', year:'2020', text:'With Seventies influences from Saturday night fever to hippy deluxe, a khaki nod to military style alongside nautical accents, experiments with transparency, patchworks of vintage prints and a mix & match approach to volume and fabric, for Summer 2020 we\'re set to see contrast take center stage. Stay a step ahead as we present a round-up of the runway trends set to take Spring/Summer 2020 by storm.'}, {img:'/img/model-11.png', alt:'model eleven', title: 'top 20 trends for', abs:'spring/summer', year:'2020', text:'With Seventies influences from Saturday night fever to hippy deluxe, a khaki nod to military style alongside nautical accents, experiments with transparency, patchworks of vintage prints and a mix & match approach to volume and fabric, for Summer 2020 we\'re set to see contrast take center stage. Stay a step ahead as we present a round-up of the runway trends set to take Spring/Summer 2020 by storm.'}, {img:'/img/model-11.png', alt:'model eleven', title: 'top 20 trends for', abs:'spring/summer', year:'2020', text:'With Seventies influences from Saturday night fever to hippy deluxe, a khaki nod to military style alongside nautical accents, experiments with transparency, patchworks of vintage prints and a mix & match approach to volume and fabric, for Summer 2020 we\'re set to see contrast take center stage. Stay a step ahead as we present a round-up of the runway trends set to take Spring/Summer 2020 by storm.'}];
+section.vertical-slider
+  .container
+    nav.pagination
+      ul.pagination__list
+        li.pagination__item.active(data-section="0")
+          a.pagination__link(href="#")
+        li.pagination__item(data-section="1")
+          a.pagination__link(href="#")
+        li.pagination__item(data-section="2")
+          a.pagination__link(href="#")
+    .vertical-slider__wrapper#trends
+      -for(let i = 0; i < slider.length; i++)
+        .vertical-slider__section
+          .section__img-wrapper
+            img.section__img(src=slider[i].img, alt=slider[i].alt)
+          .section__description
+            h3.section__description-title= slider[i].title
+            .section__description-abs= slider[i].abs
+            .section__description-year= slider[i].year
+            p.section__description-text= slider[i].text
+            button.section__description-btn More

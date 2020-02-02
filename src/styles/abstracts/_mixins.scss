@@ -1,0 +1,59 @@
+﻿@mixin center-position($params) {
+    top: $params;
+    left: $params;
+    transform: translate(-$params, -$params);
+}
+
+@mixin for_mobile {
+    @media screen and (min-width: 640px) {
+        @content;
+    }
+}
+
+%be {
+    font-family: 'bebas-webfont';
+}
+
+%clearfix {
+    &:after,
+    &:before {
+        content: "";
+        display: block;
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+
+/*---------- 'MEDIA QUERY MANAGER' ----------*/
+
+
+/*
+
+Порядок применения/ORDER: base.scss + typography.scss -> layout folder + float-grid.scss -> pages folder -> components folder
+
+0 - 600px: Phone
+600 - 900px: Tablet portrait
+900 - 1200px: Tablet landscape
+200 - 1800px: is where our normal styles apply
+1800px + : Big desktop
+
+$breakpoint argument choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+1em = 16px
+600px / 16px = 37.5em
+900px / 16px = 56.25em
+1200px / 16px = 75em
+1800px / 16px = 112.5em
+*/
+
+@mixin resp($breakpoint) {
+    @media only screen and (max-width: $breakpoint + "px") {
+        @content;
+    }
+}

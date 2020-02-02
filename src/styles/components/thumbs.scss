@@ -1,0 +1,78 @@
+.thumbs {
+    &__list {
+        display: flex;
+        @include resp(640){
+            flex-wrap: wrap;
+        }
+    }
+    &__item {
+        // display: inline-block;
+        height: 315px;
+        @include resp(1165){
+            height: 285px;
+        }
+        @include resp(960){
+            height: 265px;
+        }
+        &:nth-child(1) {
+            max-width: 400px;
+            width: 100%;
+            background: #ecf3e8;
+            text-align: right;
+            padding-right: 52px;
+            @include resp(640){
+                flex: 1 0 60%;
+            }
+        }
+        &:nth-child(2) {
+            max-width: 280px;
+            width: 100%;
+            background: #f1e5e5;
+            text-align: center;
+            @include resp(640){
+                flex: 1 0 40%;
+            }
+        }
+        &:nth-child(3) {
+            max-width: 280px;
+            width: 100%;
+            background: #f6f3e6;
+            text-align: center;
+            @include resp(640){
+                flex: 0 0 40%;
+            }
+        }
+        &:nth-child(4) {
+            max-width: 400px;
+            width: 100%;
+            background: #ecf4f5;
+            text-align: left;
+            padding-left: 52px;
+            @include resp(640){
+                flex: 0 0 60%;
+            }
+        }
+    }
+    &__title {
+        font-family: 'Roboto', sans-serif;
+        font-size: 48px;
+        line-height: 100px;
+        font-weight: 300;
+        text-transform: uppercase;
+        color: #e84f88;
+        margin-top: 200px;
+        &.title-summer{
+            font-weight: 700;
+        }
+        @include resp(1165){
+            margin-top: 190px;
+            font-size: 38px;
+            line-height: 90px;
+        }
+        @include resp(960){
+            margin-top: 180px;
+            font-size: 30px;
+            line-height: 80px;
+        }
+    }
+}
